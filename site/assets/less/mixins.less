@@ -1,32 +1,32 @@
 .full-screen {
-	width: 100vw;
-	height: 100vh;
+    width: 100vw;
+    min-height: 100vh;
 }
 
 .header-font {
-	font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .rel {
-	position: relative;
+    position: relative;
 }
 
 .absolute {
-	position: absolute;
+    position: absolute;
 }
 
 .transition-short {
-	transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
 }
 
 .page-style {
-	.full-screen;
-	.rel;	
+    .full-screen;
+    .rel;	
 }
 
 /* =============================================================================
-   Screen size variables
-   ========================================================================== */
+Screen size variables
+========================================================================== */
 
 @screen-xs:                        480px;
 @screen-xs-min:                    @screen-xs;
@@ -44,8 +44,8 @@
 @screen-lg-max:                    ( @screen-xl-min - 1 );
 
 /* =============================================================================
-   Media queries for different screen sizes
-   ========================================================================== */
+Media queries for different screen sizes
+========================================================================== */
 
 // xs only
 .screen-xs(@rules) {
@@ -131,3 +131,7 @@
     .screen-lg(@rules-lg);
     .screen-xl(@rules-xl);
 }
+
+
+
+
