@@ -17,6 +17,7 @@
 
 html {
     background-color: @purple;
+position: relative;
     &:before {
         .absolute;
         .full-screen;
@@ -27,6 +28,8 @@ html {
         bottom: 0;
         background-image: url(https://www.transparenttextures.com/patterns/graphy-dark.png);
         opacity: 0.3;
+        height: 100%;
+        background-repeat-y: repeat;
     }
 }
 
@@ -131,6 +134,14 @@ img {
         top: 30px;
     });
 
+
+    #menu-back-title{
+        display: none;
+        .screen-xs
+    ({
+        display: block;
+    });
+    }
     a {
         color: @purple;
         text-decoration: none !important;
