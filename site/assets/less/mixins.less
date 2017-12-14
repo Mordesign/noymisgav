@@ -1,32 +1,60 @@
 .full-screen {
-    width: 100vw;
-    min-height: 100vh;
+	width: 100vw;
+	height: 100vh;
 }
 
 .header-font {
-    font-family: 'Montserrat', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .rel {
-    position: relative;
+	position: relative;
 }
 
 .absolute {
-    position: absolute;
+	position: absolute;
 }
 
 .transition-short {
-    transition: all 250ms ease-in-out;
+	transition: all 250ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.transition-long {
+	transition: all 400ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.transition-longest {
+	transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .page-style {
-    .full-screen;
-    .rel;	
+	.full-screen;
+	.rel;	
+}
+
+.flex(@display:flex;
+	  @wrap:wrap;
+      @justify:flex-start;
+      @align:center;
+      @direction:row ) {
+    display: @display;
+    flex-wrap: @wrap;
+    justify-content: @justify;
+    align-items: @align;
+    flex-direction: @direction;
+}
+
+.position(@position, @top: auto, @left: auto, @bottom: auto, @right: auto) {
+	position: @position;
+	top: @top;
+	right: @right;
+	bottom: @bottom;
+	left: @left;
 }
 
 /* =============================================================================
-Screen size variables
-========================================================================== */
+   Screen size variables
+   ========================================================================== */
 
 @screen-xs:                        480px;
 @screen-xs-min:                    @screen-xs;
@@ -44,8 +72,8 @@ Screen size variables
 @screen-lg-max:                    ( @screen-xl-min - 1 );
 
 /* =============================================================================
-Media queries for different screen sizes
-========================================================================== */
+   Media queries for different screen sizes
+   ========================================================================== */
 
 // xs only
 .screen-xs(@rules) {
@@ -131,7 +159,3 @@ Media queries for different screen sizes
     .screen-lg(@rules-lg);
     .screen-xl(@rules-xl);
 }
-
-
-
-
