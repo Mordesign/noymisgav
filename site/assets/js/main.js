@@ -216,17 +216,29 @@ $(document).ready(function(){
 		},
 
 		pageTransitions: function() {
+
 			$('.projectName').hover(
 				function() {
 					var _this = $(this);
+					var index = $(this).closest('li').index();
+					var bg = $('.img-bg-wrapper ul li');
 					var triangle = $('.triangle-wrap');
 					var triangleOffset = _this.offset().top + _this.innerHeight() / 2;
+					$('.img-bg-wrapper ul li').css({'opacity': 0});
+					$('.img-bg-wrapper ul li').eq(index).css({'opacity': 1});
 					$(triangle).css({'top': triangleOffset});
+					console.log(index);
 					setTimeout(function(){
 						$(this).next('.project-strip').css({'overflow': 'visible'});	
 					}, 400);
 				},
 				function() {
+					var _this = $(this);
+					var index = $(this).closest('li').index();
+					var bg = $('.img-bg-wrapper ul li');
+					var triangle = $('.triangle-wrap');
+					var triangleOffset = _this.offset().top + _this.innerHeight() / 2;
+					$('.img-bg-wrapper ul li').css({'opacity': 0});
 					setTimeout(function(){
 						$(this).next('.project-strip').css({'overflow': 'hidden'});
 					}, 400)
