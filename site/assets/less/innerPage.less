@@ -266,7 +266,7 @@
                     }
                 }
                 #slideNext {
-
+                    z-index: 100;
                     cursor: pointer;
                     position: absolute;
                     top: 50%;
@@ -300,7 +300,7 @@
                 }
 
                 #slidePrev {
-
+                    z-index: 100;
                     cursor: pointer;
                     position: absolute;
                     top: 50%;
@@ -334,6 +334,18 @@
 
             }
         }
+
+        #threeLayersWrap{
+            .threeLayersImg{
+                width:690px;
+            }
+
+            polygon{
+                fill:@purple;
+            }
+
+        }
+
     }
 
 
@@ -444,15 +456,16 @@
             }
         }
     }
-}
 
-.fadeIn {
-    -webkit-animation: animat_show 0.8s;
-    animation: animat_show 0.8s;
-    visibility: visible !important;
-}
 
-@-webkit-keyframes animat_show{
-    0%{opacity:0}
-    100%{opacity:1}
+    .fadeIn {
+        -webkit-animation: animat_show 0.8s;
+        animation: animat_show 0.8s;
+        visibility: visible !important;
+    }
+
+    @-webkit-keyframes animat_show{
+        0%{opacity:0}
+        100%{opacity:1}
+    }
 }
