@@ -1040,16 +1040,19 @@ table {
   height: 100%;
   clear: both;
   margin: 0px auto;
+  top: 76px;
+  overflow: hidden;
+  width: 829px;
 }
 .innerPage .content-section .sliderWrap .imgSlide #photos img {
   position: absolute;
   z-index: 0;
   height: 100%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  top: 76px;
   height: 466px;
+  left: 100%;
+}
+.innerPage .content-section .sliderWrap .imgSlide #photos img.activeSlide {
+  left: 0%;
 }
 .innerPage .content-section .sliderWrap .imgSlide #photos img.previous {
   z-index: 1;
